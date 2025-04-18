@@ -4,6 +4,7 @@ vite-plugin-html-template
 
 Todo:
   ☐ OGP画像
+  ☐ ヘッダーのタグ名ページに応じて変更
 
 Layout:
   ☐ ヘッダー(PCではサイドに)
