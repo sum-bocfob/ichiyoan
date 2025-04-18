@@ -1,0 +1,94 @@
+/*
+* 色 ============================== */
+$c_body: #000a02;
+$c_dark_green: #004025;
+$c_light_green: #316745;
+$c_purple: #9d5b8b;
+$c_white: #f4f4f4;
+$c_white_opacity: rgba(#f4f4f4, 0.7);
+$c_header: #dfdfdf;
+$c_gray: #bdbdbd;
+
+/*
+* フォント ============================== */
+$ff_base: "Shippori Mincho B1", "游明朝", YuMincho, "Hiragino Mincho ProN W3", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+
+$fs_body: "body";
+$fs_headingL_SP: "headingL_SP";
+$fs_headingL_PC: "headingL_PC";
+$fs_headingM_SP: "headingM_SP";
+$fs_headingM_PC: "headingM_PC";
+$fs_btn_SP: "btn_SP";
+$fs_btn_PC: "btn_PC";
+$fs_small_SP: "small_SP";
+$fs_small_PC: "small_PC";
+$fs_form: "form";
+
+$fs: (
+    "body": (
+        "fz": 14,
+        "lh": 1.5,
+        "lts": 0,
+    ),
+    "headingL_SP": (
+        "fz": 24,
+        "lh": 1,
+        "lts": 0.2,
+    ),
+    "headingL_PC": (
+        "fz": 56,
+        "lh": 1,
+        "lts": 0.2,
+    ),
+    "headingM_SP": (
+        "fz": 16,
+        "lh": 1,
+        "lts": 0,
+    ),
+    "headingM_PC": (
+        "fz": 24,
+        "lh": 1,
+        "lts": 0,
+    ),
+    "btn_SP": (
+        "fz": 16,
+        "lh": 1,
+        "lts": 0,
+    ),
+    "btn_PC": (
+        "fz": 18,
+        "lh": 1,
+        "lts": 0,
+    ),
+    "small_SP": (
+        "fz": 12,
+        "lh": 1,
+        "lts": 0,
+    ),
+    "small_PC": (
+        "fz": 14,
+        "lh": 1,
+        "lts": 0,
+    ),
+    "form": (
+        "fz": 16,
+        "lh": 1,
+        "lts": 0,
+    ),
+);
+
+/*
+* アニメーション時間 ============================== */
+$dur_def: 0.3s;
+
+/*
+* z-index ============================== */
+$z_header: "header";
+$z_menu_bg: "menu_bg";
+$z_hamburger: "hamburger";
+
+$z_map: (
+    "header": 1500,
+    "menu_bg": 2000,
+    "hamburger": 2500,
+);

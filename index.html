@@ -1,13 +1,53 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
-  </body>
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8" />
+        <title>一葉庵 | トップページ</title>
+        <!-- サイト説明文 -->
+        <meta
+            name="description"
+            content="京都・祇園にある小さな和菓子屋「一葉庵」です。
+        伝統的な製法と、現代的な美意識を融合させた和菓子を手作りで提供しています。"
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="format-detection" content="telephone=no,email=no,address=no" />
+        <!-- 本サイトのURL(絶対パス)を記載(分散ページのSEO対策) -->
+        <link rel="canonical" href="https://sum-bocfob.github.io/ichiyoan/" />
+        <!-- ファビコン -->
+        <link rel="icon" href="public/Logo.svg" type="image/svg+xml" />
+
+        <!-- OGP -->
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://sum-bocfob.github.io/ichiyoan/" />
+        <meta property="og:title" content="一葉庵 | トップページ" />
+        <meta
+            property="og:description"
+            content="京都・祇園にある小さな和菓子屋「一葉庵」です。
+        伝統的な製法と、現代的な美意識を融合させた和菓子を手作りで提供しています。"
+        />
+        <meta property="og:site_name" content="一葉庵" />
+        <!-- TODO OGP画像 -->
+        <meta property="og:image" content="" />
+        <meta property="og:locale" content="ja_JP" />
+
+        <!-- Import Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1&display=swap" rel="stylesheet" />
+        <!-- Import CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@3.0.2/destyle.css" />
+        <link rel="stylesheet" href="src/style.css" />
+    </head>
+    <body>
+        <!-- *ヘッダー================== -->
+        <header class="header"></header>
+        {{> header}}
+        <main class="main"></main>
+
+        <!-- *フッター================== -->
+        <footer class="footer"></footer>
+
+        <!-- Import JS -->
+        <script src="src/main.js" type="module"></script>
+    </body>
 </html>

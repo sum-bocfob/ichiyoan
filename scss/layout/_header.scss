@@ -1,0 +1,114 @@
+@use "../global" as *;
+
+.l-header {
+    position: sticky;
+    top: 0;
+    left: 0;
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        padding: 16px;
+        background-color: $c_header;
+        position: relative;
+        @include zindex($z_header);
+    }
+
+    &__logo {
+        width: 93px;
+        height: auto;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__hamburger {
+        display: block;
+        width: 40px;
+        height: 28px;
+        position: fixed;
+        top: 16px;
+        right: 16px;
+        @include zindex($z_hamburger);
+
+        span {
+            height: 1px;
+            background-color: $c_body;
+            position: absolute;
+            top: 10px;
+            right: 0;
+            transition-duration: $dur_def;
+
+            &:nth-child(1) {
+                width: 100%;
+            }
+            &:nth-child(2) {
+                top: 18px;
+                width: 24px;
+            }
+        }
+
+        &.js-open-menu span {
+            background-color: $c_white;
+            &:nth-child(1) {
+                top: 50%;
+                width: 100%;
+                rotate: -20deg;
+            }
+            &:nth-child(2) {
+                top: 50%;
+                width: 100%;
+                rotate: 20deg;
+            }
+        }
+    }
+
+    &__menu-bg {
+        width: 100%;
+        height: 100vh;
+        background-color: $c_white_opacity;
+        position: fixed;
+        inset: 0;
+        transition-duration: $dur_def;
+        opacity: 0;
+
+        &.js-open-menu {
+            opacity: 1;
+        }
+    }
+
+    &__gnav {
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        inset: 0;
+        @include zindex($z_menu_bg);
+        transition-duration: $dur_def;
+        transition-timing-function: ease-out;
+        top: -110%;
+
+        &.js-open-menu {
+            top: 0;
+        }
+    }
+
+    &__list {
+        background-color: $c_purple;
+        color: $c_white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        width: 100%;
+        height: 400px;
+        padding-top: 80px;
+    }
+
+    &__wave {
+        width: 100vw;
+        height: auto;
+        translate: 0 -1px;
+    }
+}

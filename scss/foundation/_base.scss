@@ -1,9 +1,9 @@
+@use "../global" as *;
+
 body {
-    font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
-    font-size: 1rem;
-    line-height: 1.5;
-    color: #000;
-    background-color: #fff;
+    font-family: $ff_base;
+    @include setFont($fs_body);
+    color: $c_body;
 }
 
 a {
@@ -13,4 +13,14 @@ a {
 img {
     max-width: 100%;
     vertical-align: bottom;
+}
+
+input,
+textarea {
+    outline: $c_body;
+    @include setFont($fs_form);
+
+    &::placeholder {
+        color: $c_gray;
+    }
 }

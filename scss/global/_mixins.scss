@@ -1,14 +1,27 @@
-$breakpoints: (
-    "tab": "425px",
-    "pc": "768px",
-);
+@use "variables" as v;
 
-@mixin media($breakpoint: "pc") {
-    @media screen and (width > #{map-get($breakpoints, $breakpoint)}) {
+/*
+* フォント設定 ============================== */
+@mixin setFont($font_style) {
+    $fs_style: map-get(
+        $map: v.$fs,
+        $key: $font_style,
+    );
+    font-size: calc(map-get($map: $fs_style, $key: "fz") / 16 * 1rem);
+    line-height: map-get($map: $fs_style, $key: "lh");
+    letter-spacing: map-get($map: $fs_style, $key: "lts");
+}
+
+/*
+* メディアクエリ ============================== */
+@mixin media($width: 768) {
+    @media screen and (min-width: #{$width}px) {
         @content;
     }
 }
 
-@mixin rem($fontSize) {
-    font-size: calc($fontSize / 16 * 1rem);
+/*
+* z-index ============================== */
+@mixin zindex($index) {
+    z-index: map-get($map: v.$z_map, $key: $index);
 }

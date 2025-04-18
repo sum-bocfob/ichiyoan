@@ -1,0 +1,16 @@
+FLOCSS
+Sass
+vite-plugin-html-template
+
+Todo:
+  ☐ OGP画像
+
+Layout:
+  ☐ ヘッダー(PCではサイドに)
+  ☐ フッター
+
+Component:
+  ☐ ボタン
+  ☐ 商品(画像/[タグ]/商品名/説明)
+  ☐ 見出し
+
