@@ -1,0 +1,21 @@
+@use "../../global" as *;
+
+// .c-btn-wrapper {
+//     width: 100%;
+//     margin: 0 auto;
+//     @include media {
+//         max-width: 360px;
+//     }
+// }
+
+.c-btn {
+    @include setFont($fs_btn_SP);
+    display: grid;
+    place-content: center;
+    color: $c_white;
+    background-color: $c_light_green;
+    padding: 16px;
+    @include media {
+        @include setFont($fs_btn_PC);
+    }
+}

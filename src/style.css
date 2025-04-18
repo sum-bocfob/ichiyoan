@@ -394,6 +394,7 @@ body {
   font-size: 0.875rem;
   line-height: 1.5;
   letter-spacing: 0;
+  font-weight: normal;
   color: #000a02;
 }
 
@@ -412,6 +413,7 @@ textarea {
   font-size: 1rem;
   line-height: 1;
   letter-spacing: 0;
+  font-weight: normal;
 }
 input::-moz-placeholder, textarea::-moz-placeholder {
   color: #bdbdbd;
@@ -521,9 +523,78 @@ textarea::placeholder {
   translate: 0 -1px;
 }
 
+.l-section {
+  padding: 48px 0;
+  background: url(src/assets/bg.png) rgba(157, 91, 139, 0.05);
+  background-repeat: repeat;
+  background-size: 180px 180px;
+  background-position: left top;
+  background-blend-mode: color-burn;
+}
+@media screen and (min-width: 768px) {
+  .l-section {
+    padding: 64px 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  .l-section--cta {
+    padding: 80px 0;
+  }
+}
+
+.l-containerL {
+  width: 100%;
+  max-width: 1012px;
+  padding: 0 16px;
+  margin: 0 auto;
+}
+
+/*  ==============================
+* 見出し
+============================== */
+.c-headingL {
+  font-size: 1.5rem;
+  line-height: 1;
+  letter-spacing: 0.2;
+  font-weight: 600;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .c-headingL {
+    font-size: 3.5rem;
+    line-height: 1;
+    letter-spacing: 0.2;
+    font-weight: 600;
+    writing-mode: vertical-rl;
+  }
+}
+
+.c-btn {
+  font-size: 1rem;
+  line-height: 1;
+  letter-spacing: 0;
+  font-weight: bold;
+  display: grid;
+  place-content: center;
+  color: #f4f4f4;
+  background-color: #316745;
+  padding: 16px;
+}
+@media screen and (min-width: 768px) {
+  .c-btn {
+    font-size: 1.125rem;
+    line-height: 1;
+    letter-spacing: 0;
+    font-weight: bold;
+  }
+}
+
 .top {
   /*  ==============================
   * ヒーロー画像
+  ============================== */
+  /*  ==============================
+  * 和菓子一覧
   ============================== */
 }
 .top .p-hero {
@@ -544,4 +615,20 @@ textarea::placeholder {
   position: absolute;
   top: 76px;
   right: 16px;
+}
+.top .p-sweets__img {
+  margin-top: 24px;
+}
+.top .p-sweets__desc {
+  margin-top: 24px;
+}
+.top .p-btn-wrapper {
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 48px;
+}
+@media screen and (min-width: 768px) {
+  .top .p-btn-wrapper {
+    max-width: 360px;
+  }
 }/*# sourceMappingURL=style.css.map */

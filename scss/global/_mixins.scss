@@ -10,6 +10,7 @@
     font-size: calc(map-get($map: $fs_style, $key: "fz") / 16 * 1rem);
     line-height: map-get($map: $fs_style, $key: "lh");
     letter-spacing: map-get($map: $fs_style, $key: "lts");
+    font-weight: map-get($map: $fs_style, $key: "fw");
 }
 
 /*

@@ -24,4 +24,26 @@
             right: 16px;
         }
     }
+
+    /*  ==============================
+    * 和菓子一覧
+    ============================== */
+    .p-sweets {
+        &__img {
+            margin-top: 24px;
+        }
+
+        &__desc {
+            margin-top: 24px;
+        }
+    }
+
+    .p-btn-wrapper {
+        width: 100%;
+        margin: 0 auto;
+        margin-top: 48px;
+        @include media {
+            max-width: 360px;
+        }
+    }
 }
