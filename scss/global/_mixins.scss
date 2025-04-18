@@ -1,0 +1,14 @@
+$breakpoints: (
+    "tab": "425px",
+    "pc": "768px",
+);
+
+@mixin media($breakpoint: "pc") {
+    @media screen and (width > #{map-get($breakpoints, $breakpoint)}) {
+        @content;
+    }
+}
+
+@mixin rem($fontSize) {
+    font-size: calc($fontSize / 16 * 1rem);
+}
