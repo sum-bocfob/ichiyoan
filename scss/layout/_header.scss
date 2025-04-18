@@ -104,8 +104,20 @@
         align-items: center;
         gap: 40px;
         width: 100%;
-        height: 400px;
+        height: 49.26108374384237%;
         padding-top: 80px;
+
+        @media (orientation: landscape) {
+            padding-top: 20px;
+            flex-direction: row-reverse;
+            justify-content: center;
+        }
+    }
+
+    &__item {
+        @media (orientation: landscape) {
+            writing-mode: vertical-rl;
+        }
     }
 
     &__wave {
