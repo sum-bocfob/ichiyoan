@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <!-- * ======================== 
+    * ヘッド埋め込み
+    *======================== -->
+    {{> head}}
+    <body class="top">
+        <!-- * ======================== 
+            * ヒーロー画像
+            *======================== -->
+        <div class="p-hero">
+            <p class="p-hero__catch">「目で味わい、心で味わう」美しさ</p>
+        </div>
+
+        <!-- *ヘッダー埋め込み================== -->
+        {{> header}}
+
+        <main class="main">
+            <!-- * ======================== 
+            * 和菓子一覧
+            *======================== -->
+            <section class="l-section p-sweets">
+                <h2 class="c-headingL">和菓子一覧</h2>
+                <img src="src/assets/sweets_list_pc.jpg" alt="色とりどりの和菓子の写真" class="p-sweets__img" width="375" height="210" />
+                <div class="l-containerL">
+                    <p class="p-sweets__desc">
+                        ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト
+                    </p>
+                    <div class="p-btn-wrapper"><a href="sweets.html" class="c-btn">詳しく見る</a></div>
+                </div>
+            </section>
+
+            <!-- * ======================== 
+            * お問い合わせCTA埋め込み
+            *======================== -->
+            {{> cta_contact}}
+        </main>
+
+        <!-- *フッター================== -->
+        <footer class="footer"></footer>
+
+        <!-- Import JS -->
+        <script src="src/main.js" type="module"></script>
+    </body>
+</html>

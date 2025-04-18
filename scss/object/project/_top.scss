@@ -110,5 +110,12 @@
         @include media {
             max-width: 360px;
         }
+
+        &--lg {
+            height: 80px;
+            @include media {
+                height: 88px;
+            }
+        }
     }
 }

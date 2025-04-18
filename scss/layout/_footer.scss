@@ -1,0 +1,83 @@
+@use "../global" as *;
+
+.l-footer {
+    padding: 48px 0;
+    background-image: url(src/assets/seigaiha_greige.png);
+    background-size: 360px 360px;
+    background-position: left top;
+    background-repeat: repeat;
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    &__logo-link {
+        display: block;
+        width: 93px;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    &__row {
+        display: flex;
+        gap: 16px;
+
+        &:last-of-type {
+            th,
+            td {
+                margin-top: 16px;
+            }
+        }
+    }
+
+    &__table-heading {
+        width: 64px;
+        @include setFont($fs_small_SP);
+        @include media {
+            @include setFont($fs_small_PC);
+        }
+    }
+
+    &__text {
+        @include setFont($fs_small_SP);
+        @include media {
+            @include setFont($fs_small_PC);
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        gap: 32px;
+        @include setFont($fs_small_SP);
+        @include media {
+            @include setFont($fs_small_PC);
+        }
+    }
+
+    &__item {
+        writing-mode: vertical-rl;
+    }
+
+    &__sns-list {
+        display: flex;
+        justify-content: center;
+        gap: 32px;
+    }
+
+    &__sns-item {
+        width: 32px;
+        height: 32px;
+    }
+
+    &__copy {
+        @include setFont($fs_small_SP);
+        text-align: center;
+        @include media {
+            @include setFont($fs_small_PC);
+        }
+    }
+}
