@@ -489,9 +489,11 @@ textarea::placeholder {
   inset: 0;
   transition-duration: 0.3s;
   opacity: 0;
+  pointer-events: none;
 }
 .l-header__menu-bg.js-open-menu {
   opacity: 1;
+  pointer-events: all;
 }
 .l-header__gnav {
   width: 100%;
@@ -535,6 +537,9 @@ textarea::placeholder {
   .l-section {
     padding: 64px 0;
   }
+}
+.l-section--even {
+  background: url(src/assets/bg.png) rgba(183, 40, 46, 0.05);
 }
 @media screen and (min-width: 768px) {
   .l-section--cta {
@@ -596,6 +601,15 @@ textarea::placeholder {
   /*  ==============================
   * 和菓子一覧
   ============================== */
+  /*  ==============================
+  * こだわり
+  ============================== */
+  /*  ==============================
+  * 店舗情報・アクセス
+  ============================== */
+  /*  ==============================
+  * ボタンラッパー
+  ============================== */
 }
 .top .p-hero {
   width: 100%;
@@ -622,6 +636,50 @@ textarea::placeholder {
 .top .p-sweets__desc {
   margin-top: 24px;
 }
+.top .p-craftsmanship__img {
+  margin-top: 24px;
+}
+.top .p-craftsmanship__desc {
+  margin-top: 24px;
+}
+.top .p-shop__table {
+  width: 100%;
+  margin: 0 auto;
+}
+.top .p-shop__caption {
+  font-size: 1rem;
+  line-height: 1;
+  letter-spacing: 0;
+  font-weight: bold;
+  text-align: center;
+  margin: 24px 0;
+}
+.top .p-shop__row {
+  border-bottom: 1px solid #bdbdbd;
+}
+.top .p-shop__row:first-of-type th,
+.top .p-shop__row:first-of-type td {
+  padding-top: 0;
+}
+.top .p-shop__row:last-of-type {
+  border-bottom: none;
+}
+.top .p-shop__row:last-of-type th,
+.top .p-shop__row:last-of-type td {
+  padding-bottom: 0;
+}
+.top .p-shop__table-heading {
+  font-weight: normal;
+  width: 23.3236151603%;
+}
+.top .p-shop__table-heading, .top .p-shop__text {
+  padding: 16px 0;
+}
+.top .p-shop__map {
+  margin-top: 48px;
+  width: 100%;
+  aspect-ratio: 1/1;
+}
 .top .p-btn-wrapper {
   width: 100%;
   margin: 0 auto;
@@ -631,4 +689,13 @@ textarea::placeholder {
   .top .p-btn-wrapper {
     max-width: 360px;
   }
+}
+
+.u-symbol-up {
+  display: inline-block;
+  translate: 0 -0.075em;
+}
+
+.u-symbol-margin-LR {
+  margin: 0 0.1em;
 }/*# sourceMappingURL=style.css.map */

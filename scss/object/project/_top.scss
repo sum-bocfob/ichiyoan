@@ -38,6 +38,71 @@
         }
     }
 
+    /*  ==============================
+    * こだわり
+    ============================== */
+    .p-craftsmanship {
+        &__img {
+            margin-top: 24px;
+        }
+
+        &__desc {
+            margin-top: 24px;
+        }
+    }
+
+    /*  ==============================
+    * 店舗情報・アクセス
+    ============================== */
+    .p-shop {
+        &__table {
+            width: 100%;
+            margin: 0 auto;
+        }
+        &__caption {
+            @include setFont($fs_headingM_SP);
+            text-align: center;
+            margin: 24px 0;
+        }
+
+        &__row {
+            border-bottom: 1px solid $c_gray;
+
+            &:first-of-type {
+                th,
+                td {
+                    padding-top: 0;
+                }
+            }
+            &:last-of-type {
+                border-bottom: none;
+                th,
+                td {
+                    padding-bottom: 0;
+                }
+            }
+        }
+
+        &__table-heading {
+            font-weight: normal;
+            width: 23.323615160349853%;
+        }
+
+        &__table-heading,
+        &__text {
+            padding: 16px 0;
+        }
+
+        &__map {
+            margin-top: 48px;
+            width: 100%;
+            aspect-ratio: 1 / 1;
+        }
+    }
+
+    /*  ==============================
+    * ボタンラッパー
+    ============================== */
     .p-btn-wrapper {
         width: 100%;
         margin: 0 auto;

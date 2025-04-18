@@ -11,6 +11,10 @@
         padding: 64px 0;
     }
 
+    &--even {
+        background: url(src/assets/bg.png) rgba($c_red, 0.05);
+    }
+
     &--cta {
         @include media {
             padding: 80px 0;
