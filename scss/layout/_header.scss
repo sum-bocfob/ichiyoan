@@ -4,7 +4,12 @@
     position: sticky;
     top: 0;
     left: 0;
+    width: 100%;
     @include zindex($z_header);
+    @include media {
+        width: 12.5vw;
+        height: 100vh;
+    }
 
     &__inner {
         display: flex;

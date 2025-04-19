@@ -431,7 +431,14 @@ textarea::placeholder {
   position: sticky;
   top: 0;
   left: 0;
+  width: 100%;
   z-index: 1500;
+}
+@media screen and (min-width: 768px) {
+  .l-header {
+    width: 12.5vw;
+    height: 100vh;
+  }
 }
 .l-header__inner {
   display: flex;
@@ -738,6 +745,11 @@ textarea::placeholder {
   background-size: cover;
   position: relative;
 }
+@media screen and (min-width: 768px) {
+  .top .p-hero {
+    background-image: url(/src/assets/sweets_list_pc04.jpg);
+  }
+}
 .top .p-hero__catch {
   writing-mode: vertical-rl;
   font-size: 1.5rem;
@@ -748,6 +760,14 @@ textarea::placeholder {
   position: absolute;
   top: 76px;
   right: 16px;
+}
+@media screen and (min-width: 768px) {
+  .top .p-hero__catch {
+    top: 72px;
+    right: 142px;
+    padding: 32px 64px;
+    font-size: 2.5rem;
+  }
 }
 .top .p-sweets__img {
   margin-top: 24px;

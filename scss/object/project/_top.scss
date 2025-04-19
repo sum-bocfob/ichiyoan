@@ -11,6 +11,9 @@
         background-position: center center;
         background-size: cover;
         position: relative;
+        @include media {
+            background-image: url(/src/assets/sweets_list_pc04.jpg);
+        }
 
         &__catch {
             writing-mode: vertical-rl;
@@ -22,6 +25,12 @@
             position: absolute;
             top: 76px;
             right: 16px;
+            @include media {
+                top: 72px;
+                right: 142px;
+                padding: 32px 64px;
+                font-size: 2.5rem;
+            }
         }
     }
 
