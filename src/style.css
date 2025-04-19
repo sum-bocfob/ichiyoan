@@ -654,6 +654,13 @@ textarea::placeholder {
   margin: 0 auto;
 }
 
+.l-containerS {
+  width: 100%;
+  max-width: 792px;
+  padding: 0 16px;
+  margin: 0 auto;
+}
+
 .l-footer {
   padding: 48px 0;
   background-image: url(src/assets/seigaiha_greige.png);
@@ -1210,6 +1217,60 @@ textarea::placeholder {
   bottom: 0;
 }
 
+.craftsmanship .p-craftsmanship {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  position: relative;
+}
+@media screen and (min-width: 768px) {
+  .craftsmanship .p-craftsmanship {
+    gap: 88px;
+  }
+}
+.craftsmanship .p-craftsmanship .c-headingL {
+  position: absolute;
+  top: 56px;
+  right: 56px;
+  background-color: rgba(244, 244, 244, 0.7);
+  padding: 16px;
+}
+.craftsmanship .p-craftsmanship__img-wrapper {
+  margin-top: -64px;
+}
+.craftsmanship .p-craftsmanship__contents-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+.craftsmanship .p-craftsmanship__contents {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.craftsmanship .p-craftsmanship__title {
+  font-size: 1rem;
+  line-height: 1;
+  letter-spacing: 0;
+  font-weight: bold;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .craftsmanship .p-craftsmanship__title {
+    font-size: 1.5rem;
+    line-height: 1;
+    letter-spacing: 0;
+    font-weight: bold;
+  }
+}
+@media screen and (min-width: 768px) {
+  .craftsmanship .p-craftsmanship__text {
+    text-align: center;
+    width: 30em;
+    margin: 0 auto;
+  }
+}
+
 .u-symbol-up {
   display: inline-block;
   translate: 0 -0.075em;
@@ -1217,4 +1278,4 @@ textarea::placeholder {
 
 .u-symbol-margin-LR {
   margin: 0 0.1em;
-}/*# sourceMappingURL=style.css.map *
+}/*# sourceMappingURL=style.css.map */

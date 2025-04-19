@@ -1,0 +1,53 @@
+@use "../../global" as *;
+
+.craftsmanship {
+    .p-craftsmanship {
+        display: flex;
+        flex-direction: column;
+        gap: 48px;
+        position: relative;
+        @include media {
+            gap: 88px;
+        }
+
+        .c-headingL {
+            position: absolute;
+            top: 56px;
+            right: 56px;
+            background-color: $c_white_opacity;
+            padding: 16px;
+        }
+
+        &__img-wrapper {
+            margin-top: -64px;
+        }
+
+        &__contents-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 48px;
+        }
+
+        &__contents {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        &__title {
+            @include setFont($fs_headingM_SP);
+            text-align: center;
+            @include media {
+                @include setFont($fs_headingM_PC);
+            }
+        }
+
+        &__text {
+            @include media {
+                text-align: center;
+                width: 30em;
+                margin: 0 auto;
+            }
+        }
+    }
+}
