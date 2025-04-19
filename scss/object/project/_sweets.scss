@@ -1,0 +1,78 @@
+@use "../../global" as *;
+
+.sweets {
+    .p-sweets-list {
+        .c-headingL {
+            margin-left: auto;
+            margin-right: 64px;
+            @include media {
+                writing-mode: horizontal-tb;
+            }
+            @include media(1024) {
+                writing-mode: vertical-rl;
+            }
+        }
+
+        .l-containerM {
+            @include media(1024) {
+                margin-right: 256px;
+            }
+        }
+
+        &__list {
+            text-align: center;
+            margin-top: 48px;
+            display: flex;
+            flex-direction: column;
+            gap: 80px;
+
+            @include media(1024) {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                margin-top: -207px;
+                row-gap: 128px;
+                column-gap: 17.543859649122805%;
+            }
+        }
+
+        &__item {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &__title {
+            @include setFont($fs_headingM_SP);
+            margin-top: 16px;
+            @include media(1024) {
+                @include setFont($fs_headingM_PC);
+            }
+
+            &--with-tag {
+                margin-top: 24px;
+            }
+        }
+
+        &__desc {
+            margin-top: 16px;
+            text-align: left;
+        }
+
+        &__img-wrapper {
+            order: -1;
+            position: relative;
+        }
+
+        &__tag {
+            display: inline-block;
+            background-color: $c_purple;
+            padding: 6px 16px;
+            border-radius: 32px;
+            color: $c_white;
+            position: absolute;
+            // bottom: -50%;
+            left: 50%;
+            translate: -50% 50%;
+            bottom: 0;
+        }
+    }
+}

@@ -4,29 +4,49 @@
     * ヘッド埋め込み
     *======================== -->
     {{> head}}
-    <body class="top">
-        <!-- * ======================== 
-            * ヒーロー画像
-            *======================== -->
-        <div class="p-hero">
-            <p class="p-hero__catch">「目で味わい、心で味わう」美しさ</p>
-        </div>
-
+    <body class="sweets l-subpage">
         <!-- *ヘッダー埋め込み================== -->
         {{> header}}
 
-        <main class="main">
+        <main class="l-main">
             <!-- * ======================== 
             * 和菓子一覧
             *======================== -->
-            <section class="l-section p-sweets">
-                <h2 class="c-headingL">和菓子一覧</h2>
-                <img src="src/assets/sweets_list_pc.jpg" alt="色とりどりの和菓子の写真" class="p-sweets__img" width="375" height="210" />
-                <div class="l-containerL">
-                    <p class="p-sweets__desc">
-                        ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト
-                    </p>
-                    <div class="p-btn-wrapper"><a href="sweets.html" class="c-btn">詳しく見る</a></div>
+            <section class="l-section p-sweets-list">
+                <h2 class="c-headingL c-headingL--V-PC">和菓子一覧</h2>
+                <div class="l-containerM">
+                    <ul class="p-sweets-list__list">
+                        <li class="p-sweets-list__item js-inview">
+                            <h3 class="p-sweets-list__title p-sweets-list__title--with-tag">和菓子</h3>
+                            <p class="p-sweets-list__desc">和菓子の商品説明和菓子の商品説明和菓子の商品説明和菓子の商品説明和菓子の商品説明和菓子の商品説明和菓子の商品説明和菓子の商品説明</p>
+                            <div class="p-sweets-list__img-wrapper">
+                                <img src="src/assets/product02.jpg" alt="" class="p-sweets-list__img" />
+                                <span class="p-sweets-list__tag">季節限定！</span>
+                            </div>
+                        </li>
+                        <li class="p-sweets-list__item js-inview">
+                            <h3 class="p-sweets-list__title p-sweets-list__title--with-tag">和菓子</h3>
+                            <p class="p-sweets-list__desc">和菓子の商品説明和菓子の商品説明和菓子の商品説明和菓子の商品説明和菓子の商品説明和菓子の商品説明和菓子の商品説明和菓子の商品説明</p>
+                            <div class="p-sweets-list__img-wrapper">
+                                <img src="src/assets/product.jpg" alt="" class="p-sweets-list__img" />
+                                <span class="p-sweets-list__tag">季節限定！</span>
+                            </div>
+                        </li>
+                        <li class="p-sweets-list__item js-inview">
+                            <h3 class="p-sweets-list__title">和菓子</h3>
+                            <p class="p-sweets-list__desc">和菓子の商品説明和菓子の商品説明和菓子の商品説明和菓子の商品説明和菓子の商品説明和菓子の商品説明和菓子の商品説明和菓子の商品説明</p>
+                            <div class="p-sweets-list__img-wrapper">
+                                <img src="src/assets/product02.jpg" alt="" class="p-sweets-list__img" />
+                            </div>
+                        </li>
+                        <li class="p-sweets-list__item js-inview">
+                            <h3 class="p-sweets-list__title">和菓子</h3>
+                            <p class="p-sweets-list__desc">和菓子の商品説明和菓子の商品説明和菓子の商品説明和菓子の商品説明和菓子の商品説明和菓子の商品説明和菓子の商品説明和菓子の商品説明</p>
+                            <div class="p-sweets-list__img-wrapper">
+                                <img src="src/assets/product.jpg" alt="" class="p-sweets-list__img" />
+                            </div>
+                        </li>
+                    </ul>
                 </div>
             </section>
 
@@ -36,8 +56,8 @@
             {{> cta_contact}}
         </main>
 
-        <!-- *フッター================== -->
-        <footer class="footer"></footer>
+        <!-- *フッター埋め込み================== -->
+        {{> footer}}
 
         <!-- Import JS -->
         <script src="src/main.js" type="module"></script>

@@ -428,6 +428,22 @@ textarea::placeholder {
 }
 
 .l-header {
+  grid-area: header;
+}
+
+.l-hero {
+  grid-area: hero;
+}
+
+.l-main {
+  grid-area: main;
+}
+
+.l-footer {
+  grid-area: footer;
+}
+
+.l-header {
   position: sticky;
   top: 0;
   left: 0;
@@ -631,6 +647,13 @@ textarea::placeholder {
   margin: 0 auto;
 }
 
+.l-containerM {
+  width: 72.380952381%;
+  max-width: 912px;
+  padding: 0 16px;
+  margin: 0 auto;
+}
+
 .l-footer {
   padding: 48px 0;
   background-image: url(src/assets/seigaiha_greige.png);
@@ -757,6 +780,19 @@ textarea::placeholder {
   }
 }
 
+.l-subpage {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: "header" "main" "footer";
+}
+@media screen and (min-width: 768px) {
+  .l-subpage {
+    grid-template-columns: 180px 1fr;
+    grid-template-rows: max-content max-content;
+    grid-template-areas: "header main" "footer footer";
+  }
+}
+
 /*  ==============================
 * 見出し
 ============================== */
@@ -820,9 +856,6 @@ textarea::placeholder {
   /*  ==============================
   * 店舗情報・アクセス
   ============================== */
-  /*  ==============================
-  * ボタンラッパー
-  ============================== */
 }
 @media screen and (min-width: 768px) {
   .top {
@@ -838,7 +871,6 @@ textarea::placeholder {
   background-position: center center;
   background-size: cover;
   position: relative;
-  grid-area: hero;
 }
 @media screen and (min-width: 768px) {
   .top .p-hero {
@@ -864,11 +896,9 @@ textarea::placeholder {
     font-size: 2.5rem;
   }
 }
-.top .main {
-  grid-area: main;
-}
 .top .p-sweets {
   position: relative;
+  text-align: center;
   /*  ==============================
   * ボタンラッパー
   ============================== */
@@ -933,6 +963,9 @@ textarea::placeholder {
   /*  ==============================
   * ボタンラッパー
   ============================== */
+}
+.top .p-craftsmanship__title-wrapper {
+  text-align: center;
 }
 @media screen and (min-width: 768px) {
   .top .p-craftsmanship__title-wrapper {
@@ -1077,22 +1110,104 @@ textarea::placeholder {
     height: 88px;
   }
 }
-.top .p-btn-wrapper {
+
+/*  ==============================
+    * ボタンラッパー
+    ============================== */
+.p-btn-wrapper {
   width: 100%;
   margin: 0 auto;
 }
 @media screen and (min-width: 768px) {
-  .top .p-btn-wrapper {
+  .p-btn-wrapper {
     max-width: 480px;
   }
 }
-.top .p-btn-wrapper--lg {
+.p-btn-wrapper--lg {
   height: 80px;
 }
 @media screen and (min-width: 768px) {
-  .top .p-btn-wrapper--lg {
+  .p-btn-wrapper--lg {
     height: 88px;
   }
+}
+
+.sweets .p-sweets-list .c-headingL {
+  margin-left: auto;
+  margin-right: 64px;
+}
+@media screen and (min-width: 768px) {
+  .sweets .p-sweets-list .c-headingL {
+    writing-mode: horizontal-tb;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .sweets .p-sweets-list .c-headingL {
+    writing-mode: vertical-rl;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .sweets .p-sweets-list .l-containerM {
+    margin-right: 256px;
+  }
+}
+.sweets .p-sweets-list__list {
+  text-align: center;
+  margin-top: 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+@media screen and (min-width: 1024px) {
+  .sweets .p-sweets-list__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: -207px;
+    row-gap: 128px;
+    -moz-column-gap: 17.5438596491%;
+         column-gap: 17.5438596491%;
+  }
+}
+.sweets .p-sweets-list__item {
+  display: flex;
+  flex-direction: column;
+}
+.sweets .p-sweets-list__title {
+  font-size: 1rem;
+  line-height: 1;
+  letter-spacing: 0;
+  font-weight: bold;
+  margin-top: 16px;
+}
+@media screen and (min-width: 1024px) {
+  .sweets .p-sweets-list__title {
+    font-size: 1.5rem;
+    line-height: 1;
+    letter-spacing: 0;
+    font-weight: bold;
+  }
+}
+.sweets .p-sweets-list__title--with-tag {
+  margin-top: 24px;
+}
+.sweets .p-sweets-list__desc {
+  margin-top: 16px;
+  text-align: left;
+}
+.sweets .p-sweets-list__img-wrapper {
+  order: -1;
+  position: relative;
+}
+.sweets .p-sweets-list__tag {
+  display: inline-block;
+  background-color: #9d5b8b;
+  padding: 6px 16px;
+  border-radius: 32px;
+  color: #f4f4f4;
+  position: absolute;
+  left: 50%;
+  translate: -50% 50%;
+  bottom: 0;
 }
 
 .u-symbol-up {
@@ -1102,4 +1217,4 @@ textarea::placeholder {
 
 .u-symbol-margin-LR {
   margin: 0 0.1em;
-}/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map *

@@ -28,7 +28,7 @@
         background-position: center center;
         background-size: cover;
         position: relative;
-        grid-area: hero;
+        // grid-area: hero;
         @include media {
             background-image: url(/src/assets/sweets_list_pc04.jpg);
         }
@@ -52,15 +52,16 @@
         }
     }
 
-    .main {
-        grid-area: main;
-    }
+    // .main {
+    //     grid-area: main;
+    // }
 
     /*  ==============================
     * 和菓子一覧
     ============================== */
     .p-sweets {
         position: relative;
+        text-align: center;
         &__title-wrapper {
             @include media {
                 display: flex;
@@ -125,6 +126,7 @@
     .p-craftsmanship {
         position: relative;
         &__title-wrapper {
+            text-align: center;
             @include media {
                 display: flex;
                 flex-direction: row-reverse;
@@ -271,22 +273,22 @@
             }
         }
     }
+}
 
-    /*  ==============================
+/*  ==============================
     * ボタンラッパー
     ============================== */
-    .p-btn-wrapper {
-        width: 100%;
-        margin: 0 auto;
-        @include media {
-            max-width: 480px;
-        }
+.p-btn-wrapper {
+    width: 100%;
+    margin: 0 auto;
+    @include media {
+        max-width: 480px;
+    }
 
-        &--lg {
-            height: 80px;
-            @include media {
-                height: 88px;
-            }
+    &--lg {
+        height: 80px;
+        @include media {
+            height: 88px;
         }
     }
 }
