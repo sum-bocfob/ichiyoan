@@ -1,6 +1,23 @@
 @use "../../global" as *;
 
 .top {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "hero"
+        "header"
+        "main"
+        "footer";
+
+    @include media {
+        grid-template-columns: 180px 1fr;
+        grid-template-rows: max-content max-content max-content;
+        grid-template-areas:
+            "hero hero"
+            "header main"
+            "footer footer";
+    }
+
     /*  ==============================
     * ヒーロー画像
     ============================== */
@@ -11,6 +28,10 @@
         background-position: center center;
         background-size: cover;
         position: relative;
+        grid-area: hero;
+        @include media {
+            background-image: url(/src/assets/sweets_list_pc04.jpg);
+        }
 
         &__catch {
             writing-mode: vertical-rl;
@@ -22,7 +43,17 @@
             position: absolute;
             top: 76px;
             right: 16px;
+            @include media {
+                top: 72px;
+                right: 142px;
+                padding: 32px 64px;
+                font-size: 2.5rem;
+            }
         }
+    }
+
+    .main {
+        grid-area: main;
     }
 
     /*  ==============================
