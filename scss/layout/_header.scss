@@ -5,10 +5,17 @@
     top: 0;
     left: 0;
     width: 100%;
+    height: auto;
     @include zindex($z_header);
+    grid-area: header;
+
     @include media {
-        width: 12.5vw;
-        height: 100vh;
+        width: 180px;
+        height: 100%;
+        position: relative;
+        top: auto;
+        left: auto;
+        width: auto;
     }
 
     &__inner {
@@ -17,11 +24,24 @@
         padding: 16px;
         background-color: $c_header;
         position: relative;
+        @include media {
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            position: sticky;
+            top: 0;
+            left: 0;
+            width: 100%;
+        }
     }
 
     &__logo {
         width: 93px;
         height: auto;
+
+        @include media {
+            width: 80px;
+        }
 
         img {
             width: 100%;
@@ -37,6 +57,9 @@
         top: 16px;
         right: 16px;
         @include zindex($z_hamburger);
+        @include media {
+            display: none;
+        }
 
         span {
             height: 1px;
@@ -96,6 +119,14 @@
         transition-timing-function: ease-out;
         top: -110%;
 
+        @include media {
+            position: static;
+            // top: 345px;
+            inset: auto;
+            // top: 0;
+            // height: auto;
+        }
+
         &.js-open-menu {
             top: 0;
         }
@@ -117,11 +148,22 @@
             flex-direction: row-reverse;
             justify-content: center;
         }
+
+        @include media {
+            flex-direction: column;
+            background: none;
+            color: $c_body;
+            @include setFont($fs_form);
+        }
     }
 
     &__item {
         @media (orientation: landscape) {
             writing-mode: vertical-rl;
+        }
+
+        @include media {
+            writing-mode: horizontal-tb;
         }
     }
 
@@ -129,5 +171,8 @@
         width: 100vw;
         height: auto;
         translate: 0 -1px;
+        @include media {
+            display: none;
+        }
     }
 }

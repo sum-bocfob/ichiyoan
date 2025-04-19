@@ -432,12 +432,18 @@ textarea::placeholder {
   top: 0;
   left: 0;
   width: 100%;
+  height: auto;
   z-index: 1500;
+  grid-area: header;
 }
 @media screen and (min-width: 768px) {
   .l-header {
-    width: 12.5vw;
-    height: 100vh;
+    width: 180px;
+    height: 100%;
+    position: relative;
+    top: auto;
+    left: auto;
+    width: auto;
   }
 }
 .l-header__inner {
@@ -447,9 +453,25 @@ textarea::placeholder {
   background-color: #dfdfdf;
   position: relative;
 }
+@media screen and (min-width: 768px) {
+  .l-header__inner {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+}
 .l-header__logo {
   width: 93px;
   height: auto;
+}
+@media screen and (min-width: 768px) {
+  .l-header__logo {
+    width: 80px;
+  }
 }
 .l-header__logo img {
   width: 100%;
@@ -463,6 +485,11 @@ textarea::placeholder {
   top: 16px;
   right: 16px;
   z-index: 2500;
+}
+@media screen and (min-width: 768px) {
+  .l-header__hamburger {
+    display: none;
+  }
 }
 .l-header__hamburger span {
   height: 1px;
@@ -516,6 +543,12 @@ textarea::placeholder {
   transition-timing-function: ease-out;
   top: -110%;
 }
+@media screen and (min-width: 768px) {
+  .l-header__gnav {
+    position: static;
+    inset: auto;
+  }
+}
 .l-header__gnav.js-open-menu {
   top: 0;
 }
@@ -537,15 +570,36 @@ textarea::placeholder {
     justify-content: center;
   }
 }
+@media screen and (min-width: 768px) {
+  .l-header__list {
+    flex-direction: column;
+    background: none;
+    color: #000a02;
+    font-size: 1rem;
+    line-height: 1;
+    letter-spacing: 0;
+    font-weight: normal;
+  }
+}
 @media (orientation: landscape) {
   .l-header__item {
     writing-mode: vertical-rl;
+  }
+}
+@media screen and (min-width: 768px) {
+  .l-header__item {
+    writing-mode: horizontal-tb;
   }
 }
 .l-header__wave {
   width: 100vw;
   height: auto;
   translate: 0 -1px;
+}
+@media screen and (min-width: 768px) {
+  .l-header__wave {
+    display: none;
+  }
 }
 
 .l-section {
@@ -583,6 +637,12 @@ textarea::placeholder {
   background-size: 360px 360px;
   background-position: left top;
   background-repeat: repeat;
+  grid-area: footer;
+}
+@media screen and (min-width: 768px) {
+  .l-footer {
+    width: 100%;
+  }
 }
 .l-footer__inner {
   display: flex;
@@ -721,6 +781,9 @@ textarea::placeholder {
 }
 
 .top {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: "hero" "header" "main" "footer";
   /*  ==============================
   * ヒーロー画像
   ============================== */
@@ -737,6 +800,13 @@ textarea::placeholder {
   * ボタンラッパー
   ============================== */
 }
+@media screen and (min-width: 768px) {
+  .top {
+    grid-template-columns: 180px 1fr;
+    grid-template-rows: max-content max-content max-content;
+    grid-template-areas: "hero hero" "header main" "footer footer";
+  }
+}
 .top .p-hero {
   width: 100%;
   height: 100vh;
@@ -744,6 +814,7 @@ textarea::placeholder {
   background-position: center center;
   background-size: cover;
   position: relative;
+  grid-area: hero;
 }
 @media screen and (min-width: 768px) {
   .top .p-hero {
@@ -768,6 +839,9 @@ textarea::placeholder {
     padding: 32px 64px;
     font-size: 2.5rem;
   }
+}
+.top .main {
+  grid-area: main;
 }
 .top .p-sweets__img {
   margin-top: 24px;

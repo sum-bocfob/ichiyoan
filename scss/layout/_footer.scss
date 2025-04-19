@@ -6,6 +6,10 @@
     background-size: 360px 360px;
     background-position: left top;
     background-repeat: repeat;
+    grid-area: footer;
+    @include media {
+        width: 100%;
+    }
 
     &__inner {
         display: flex;
