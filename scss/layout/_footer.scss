@@ -14,7 +14,11 @@
     &__inner {
         display: flex;
         flex-direction: column;
+        align-items: center;
         gap: 32px;
+        @include media {
+            gap: 48px;
+        }
     }
 
     &__logo-link {
@@ -22,6 +26,9 @@
         width: 93px;
         height: auto;
         margin: 0 auto;
+        @include media {
+            width: 180px;
+        }
     }
 
     &__row {
@@ -41,6 +48,7 @@
         @include setFont($fs_small_SP);
         @include media {
             @include setFont($fs_small_PC);
+            width: 80px;
         }
     }
 
@@ -59,6 +67,7 @@
         @include setFont($fs_small_SP);
         @include media {
             @include setFont($fs_small_PC);
+            gap: 48px;
         }
     }
 
@@ -75,6 +84,10 @@
     &__sns-item {
         width: 32px;
         height: 32px;
+        @include media {
+            width: 48px;
+            height: 48px;
+        }
     }
 
     &__copy {

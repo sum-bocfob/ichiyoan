@@ -6,8 +6,15 @@
 .c-headingL {
     @include setFont($fs_headingL_SP);
     text-align: center;
+
     @include media {
         @include setFont($fs_headingL_PC);
-        writing-mode: vertical-rl;
+    }
+
+    &--V-PC {
+        @include media {
+            writing-mode: vertical-rl;
+            white-space: nowrap;
+        }
     }
 }
