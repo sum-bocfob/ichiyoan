@@ -158,6 +158,13 @@
         }
     }
 
+    &__link--active {
+        font-weight: bold;
+        @include media {
+            color: $c_dark_green;
+        }
+    }
+
     &__item {
         @media (orientation: landscape) {
             writing-mode: vertical-rl;

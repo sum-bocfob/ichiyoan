@@ -614,6 +614,14 @@ textarea:focus {
     font-weight: normal;
   }
 }
+.l-header__link--active {
+  font-weight: bold;
+}
+@media screen and (min-width: 768px) {
+  .l-header__link--active {
+    color: #004025;
+  }
+}
 @media (orientation: landscape) {
   .l-header__item {
     writing-mode: vertical-rl;
