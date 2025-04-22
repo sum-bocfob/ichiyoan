@@ -14,10 +14,17 @@
     place-content: center;
     color: $c_white;
     background-color: $c_light_green;
+    border: 1px solid $c_light_green;
     padding: 16px;
     width: 100%;
     height: 100%;
     @include media {
         @include setFont($fs_btn_PC);
+    }
+
+    &:hover {
+        background-color: $c_white;
+        color: $c_light_green;
+        opacity: 1;
     }
 }
