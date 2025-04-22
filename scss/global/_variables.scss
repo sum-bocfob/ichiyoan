@@ -95,11 +95,13 @@ $dur_def: 0.3s;
 /*
 * z-index ============================== */
 $z_header: "header";
+$z_menu_bg_transparent: "menu_bg_transparent";
 $z_menu_bg: "menu_bg";
 $z_hamburger: "hamburger";
 
 $z_map: (
     "header": 1500,
+    "menu_bg_transparent": 1800,
     "menu_bg": 2000,
     "hamburger": 2500,
 );

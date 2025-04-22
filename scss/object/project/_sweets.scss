@@ -3,12 +3,12 @@
 .sweets {
     .p-sweets-list {
         .c-headingL {
-            margin-left: auto;
-            margin-right: 64px;
             @include media {
                 writing-mode: horizontal-tb;
             }
             @include media(1024) {
+                margin-left: auto;
+                margin-right: 64px;
                 writing-mode: vertical-rl;
             }
         }

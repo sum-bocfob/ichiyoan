@@ -11,15 +11,19 @@
         }
 
         .c-headingL {
-            position: absolute;
-            top: 56px;
-            right: 56px;
-            background-color: $c_white_opacity;
-            padding: 16px;
+            @include media {
+                position: absolute;
+                top: 56px;
+                right: 56px;
+                background-color: $c_white_opacity;
+                padding: 16px;
+            }
         }
 
         &__img-wrapper {
-            margin-top: -64px;
+            @include media {
+                margin-top: -64px;
+            }
         }
 
         &__contents-wrapper {
