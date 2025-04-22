@@ -595,11 +595,11 @@ textarea:focus {
   align-items: center;
   gap: 40px;
   width: 100%;
-  padding: 80px;
+  padding: 80px 0;
 }
 @media (orientation: landscape) {
   .l-header__list {
-    padding: 20px;
+    padding: 20px 0;
     flex-direction: row-reverse;
     justify-content: center;
   }
