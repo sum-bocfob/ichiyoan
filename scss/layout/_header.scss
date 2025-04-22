@@ -120,11 +120,12 @@
         top: -110%;
 
         @include media {
+            margin-top: 72px;
             position: static;
             // top: 345px;
             inset: auto;
             // top: 0;
-            // height: auto;
+            height: 100%;
         }
 
         &.js-open-menu {

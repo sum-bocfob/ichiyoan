@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <!-- * ======================== 
+    * ヘッド埋め込み
+    *======================== -->
+    {{> head}}
+    <body class="contact l-subpage">
+        <!-- *ヘッダー埋め込み================== -->
+        {{> header}}
+
+        <main class="l-main">
+            <!-- * ======================== 
+            * 店舗情報・アクセス
+            *======================== -->
+            <section class="l-section p-contact">
+                <h2 class="c-headingL">お問い合わせ</h2>
+
+                <div class="l-containerS">
+                    <form action="#" method="post" class="p-form" id="p-form">
+                        <div class="p-form__area">
+                            <label class="p-form__label" for="name">お名前</label>
+                            <input type="text" name="name" id="name" class="p-form__name p-form__input" placeholder="山田太郎" />
+                        </div>
+                        <div class="p-form__area">
+                            <label class="p-form__label" for="tel">電話番号</label>
+                            <input type="text" name="tel" id="tel" class="p-form__tel p-form__input" placeholder="012-3456-7890" />
+                        </div>
+                        <div class="p-form__area">
+                            <label class="p-form__label" for="mail">メールアドレス</label>
+                            <input type="text" name="mail" id="mail" class="p-form__mail p-form__input" placeholder="qwertyuiop@srfj.cagaoi" />
+                        </div>
+                        <div class="p-form__area">
+                            <label class="p-form__label" for="content">お問い合わせ内容</label>
+                            <textarea name="content" id="content" class="p-form__content p-form__input"></textarea>
+                        </div>
+                    </form>
+                    <!-- /.p-form -->
+
+                    <div class="p-btn-wrapper"><button type="submit" form="p-form" class="c-btn">送信</button></div>
+                </div>
+                <!-- /.l-containerS -->
+            </section>
+        </main>
+
+        <!-- *フッター埋め込み================== -->
+        {{> footer}}
+
+        <!-- Import JS -->
+        <script src="src/main.js" type="module"></script>
+    </body>
+</html>

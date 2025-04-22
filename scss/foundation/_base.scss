@@ -4,6 +4,7 @@ body {
     font-family: $ff_base;
     @include setFont($fs_body);
     color: $c_body;
+    background-color: $c_header;
 }
 
 a {
@@ -19,12 +20,26 @@ img {
     vertical-align: bottom;
 }
 
+input {
+    height: 32px;
+}
+
+textarea {
+    height: 200px;
+}
+
 input,
 textarea {
-    outline: $c_body;
+    outline: 1px solid $c_body;
     @include setFont($fs_form);
+    padding: 8px;
 
     &::placeholder {
         color: $c_gray;
+    }
+
+    &:focus {
+        outline: auto;
+        outline: auto -webkit-focus-ring-color;
     }
 }
