@@ -1271,6 +1271,129 @@ textarea::placeholder {
   }
 }
 
+.shop .p-shop {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  /*
+  * アクセス、目印、注意事項 ============================== */
+}
+@media screen and (min-width: 768px) {
+  .shop .p-shop {
+    gap: 80px;
+  }
+}
+.shop .p-shop__map-wrapper {
+  order: -1;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1/1;
+  text-align: right;
+}
+@media screen and (min-width: 768px) {
+  .shop .p-shop__map-wrapper {
+    aspect-ratio: 1260/708;
+  }
+}
+.shop .p-shop__map {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1/1;
+}
+@media screen and (min-width: 768px) {
+  .shop .p-shop__map {
+    aspect-ratio: 1260/708;
+  }
+}
+.shop .p-shop__map-link {
+  margin-top: 8px;
+  text-decoration: underline;
+  padding-right: 16px;
+}
+.shop .p-shop .c-headingL {
+  order: -2;
+}
+.shop .p-shop__caption {
+  font-size: 1rem;
+  line-height: 1;
+  letter-spacing: 0;
+  font-weight: bold;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .shop .p-shop__caption {
+    font-size: 1.5rem;
+    line-height: 1;
+    letter-spacing: 0;
+    font-weight: bold;
+  }
+}
+.shop .p-shop__table {
+  width: 100%;
+  margin: 0 auto;
+}
+.shop .p-shop__caption {
+  font-size: 1rem;
+  line-height: 1;
+  letter-spacing: 0;
+  font-weight: bold;
+  text-align: center;
+  margin: 24px 0;
+}
+@media screen and (min-width: 768px) {
+  .shop .p-shop__caption {
+    font-size: 1.5rem;
+    line-height: 1;
+    letter-spacing: 0;
+    font-weight: bold;
+    margin-top: 0;
+  }
+}
+.shop .p-shop__row {
+  border-bottom: 1px solid #bdbdbd;
+}
+.shop .p-shop__row:first-of-type th,
+.shop .p-shop__row:first-of-type td {
+  padding-top: 0;
+}
+.shop .p-shop__row:last-of-type {
+  border-bottom: none;
+}
+.shop .p-shop__row:last-of-type th,
+.shop .p-shop__row:last-of-type td {
+  padding-bottom: 0;
+}
+.shop .p-shop__table-heading {
+  font-weight: normal;
+  width: 23.3236151603%;
+}
+.shop .p-shop__table-heading, .shop .p-shop__text {
+  padding: 16px 0;
+}
+.shop .p-shop__note-list {
+  margin-top: 80px;
+}
+.shop .p-shop__note-list__item {
+  padding: 16px 0;
+  border-bottom: 1px solid #bdbdbd;
+}
+.shop .p-shop__note-list__item:first-of-type {
+  padding-top: 0;
+}
+.shop .p-shop__note-list__item:last-of-type {
+  border-bottom: none;
+}
+.shop .p-shop__access-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.shop .p-shop__sign-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
 .u-symbol-up {
   display: inline-block;
   translate: 0 -0.075em;

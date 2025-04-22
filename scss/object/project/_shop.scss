@@ -1,0 +1,126 @@
+@use "../../global" as *;
+
+.shop {
+    .p-shop {
+        display: flex;
+        flex-direction: column;
+        gap: 48px;
+
+        @include media {
+            gap: 80px;
+        }
+
+        &__map-wrapper {
+            order: -1;
+            width: 100%;
+            height: auto;
+            aspect-ratio: 1 / 1;
+            text-align: right;
+
+            @include media {
+                aspect-ratio: 1260 / 708;
+            }
+        }
+
+        &__map {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 1 / 1;
+
+            @include media {
+                aspect-ratio: 1260 / 708;
+            }
+        }
+
+        &__map-link {
+            margin-top: 8px;
+            text-decoration: underline;
+            padding-right: 16px;
+        }
+
+        .c-headingL {
+            order: -2;
+        }
+
+        &__caption {
+            @include setFont($fs_headingM_SP);
+            text-align: center;
+            @include media {
+                @include setFont($fs_headingM_PC);
+            }
+        }
+
+        &__table {
+            width: 100%;
+            margin: 0 auto;
+        }
+        &__caption {
+            @include setFont($fs_headingM_SP);
+            text-align: center;
+            margin: 24px 0;
+            @include media {
+                @include setFont($fs_headingM_PC);
+                margin-top: 0;
+            }
+        }
+
+        &__row {
+            border-bottom: 1px solid $c_gray;
+
+            &:first-of-type {
+                th,
+                td {
+                    padding-top: 0;
+                }
+            }
+            &:last-of-type {
+                border-bottom: none;
+                th,
+                td {
+                    padding-bottom: 0;
+                }
+            }
+        }
+
+        &__table-heading {
+            font-weight: normal;
+            width: 23.323615160349853%;
+        }
+
+        &__table-heading,
+        &__text {
+            padding: 16px 0;
+        }
+
+        /*
+        * アクセス、目印、注意事項 ============================== */
+        &__note-list {
+            margin-top: 80px;
+
+            &__item {
+                padding: 16px 0;
+                border-bottom: 1px solid $c_gray;
+
+                &:first-of-type {
+                    padding-top: 0;
+                }
+
+                &:last-of-type {
+                    border-bottom: none;
+                }
+            }
+        }
+
+        &__access-list {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        &__sign-list {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+    }
+}
